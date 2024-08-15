@@ -13,15 +13,15 @@ reading() { read -p "$(red "$1")" "$2"; }
 
 USERNAME=$(whoami)
 HOSTNAME=$(hostname)
-export UUID=${UUID:-'bc97f674-c578-4940-9234-0a1da46041b9'}
+export UUID=${UUID:-'8aede477-4c85-454b-955b-928a3cec5208'}
 export NEZHA_SERVER=${NEZHA_SERVER:-''} 
 export NEZHA_PORT=${NEZHA_PORT:-'5555'}     
 export NEZHA_KEY=${NEZHA_KEY:-''} 
-export ARGO_DOMAIN=${ARGO_DOMAIN:-''}   
-export ARGO_AUTH=${ARGO_AUTH:-''}
-export VMESS_PORT=${VMESS_PORT:-'40000'}
-export TUIC_PORT=${TUIC_PORT:-'50000'}
-export HY2_PORT=${HY2_PORT:-'60000'}
+export ARGO_DOMAIN=${ARGO_DOMAIN:-'sl1.sdf-alpha.us.kg'}   
+export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiMjRkZTQ5YWU0MzU5OTYxMmY5OGFkYTQwNzg0NGE3NWUiLCJ0IjoiMDY3YzVhMTUtOTM5Yi00NzY5LWJhMjMtMzY4MGJjMjJiOWUwIiwicyI6Ik5UY3dOMkkyTm1RdE1XTmtZaTAwWkdRMkxUZ3paR1V0WXpBME5Ea3pPRFEyTlRWayJ9'}
+export VMESS_PORT=${VMESS_PORT:-'29098'}
+export TUIC_PORT=${TUIC_PORT:-'8068'}
+export HY2_PORT=${HY2_PORT:-'57511'}
 
 [[ "$HOSTNAME" == "s1.ct8.pl" ]] && WORKDIR="domains/${USERNAME}.ct8.pl/logs" || WORKDIR="domains/${USERNAME}.serv00.net/logs"
 [ -d "$WORKDIR" ] || (mkdir -p "$WORKDIR" && chmod 777 "$WORKDIR")
